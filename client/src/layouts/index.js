@@ -1,10 +1,12 @@
 import React from "react";
-import SideBar from "./sider";
+import Head from "./header/header";
+import SideBar from "./sider/sider";
 
 export default function Main() {
     return (
-        <>
+        <>  
             <SideBar />
+            <Head />
         </>
     )
 }

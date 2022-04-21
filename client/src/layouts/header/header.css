@@ -1,0 +1,37 @@
+.ant-layout-header {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #fff;
+    border-bottom: #e0e0e0 1px solid;
+}
+
+.header__content {
+    margin-left: 16px;
+}
+.icon {
+    font-size: 30px;
+    position: relative;
+}
+
+/* .notification {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 2.6%;
+    right: 5.4%;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    text-align: center;
+    color: #fff;
+    background: red;
+    border-radius: 10px;
+} */
+
+.avatar {
+    border: #000 1px solid;
+}
