@@ -1,0 +1,15 @@
+.sider {
+    background-color: #fff;
+    height: 110vh;
+    width: 250px !important;
+    outline: #e0e0e0 1px solid;
+}
+
+.ant-layout-header {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #fff;
+    border-bottom: #e0e0e0 1px solid;
+}

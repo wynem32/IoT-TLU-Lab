@@ -1,12 +1,3 @@
-.ant-layout-header {
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    background: #fff;
-    border-bottom: #e0e0e0 1px solid;
-}
-
 .header__content {
     margin-left: 16px;
 }
