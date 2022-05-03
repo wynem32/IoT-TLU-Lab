@@ -6,6 +6,7 @@ import './index.css'
 import { Route, Routes } from "react-router-dom";
 import LabSchedule from "../pages/general/Lab schedule";
 import ListDevices from "../pages/general/List devices";
+import CreateSchedule from "../pages/user/create schedule";
 
 const { Sider, Header, Content } = Layout
 export default function Main() {
@@ -21,6 +22,7 @@ export default function Main() {
                 <Content>
                     <Routes>
                         <Route path="/lab-schedule" element={ <LabSchedule/> } />
+                        <Route path="/register-to-use" element={ <CreateSchedule /> } />
                         <Route path="/list-devices" element={ <ListDevices/> } />
                     </Routes>
                 </Content> 

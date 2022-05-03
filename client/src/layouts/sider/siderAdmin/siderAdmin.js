@@ -9,7 +9,7 @@ export default function SiderAdmin () {
     return (
         <>
             <Space direction="vertical">
-                <Card className="sider__navbar-wrapper" title="MENU" bordered={false}>
+                <Card className="sider__navbar-wrapper" title="MAIN" bordered={false}>
                     <p className="sider__nav-content">
                         <FontAwesomeIcon className="sider__nav-icon" icon={faHouse} />
                         Dashboard

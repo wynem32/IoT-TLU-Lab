@@ -1,0 +1,13 @@
+.form {
+    margin: auto
+}
+
+.form__row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form__row-input label {
+    width: 100px;
+}

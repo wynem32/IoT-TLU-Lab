@@ -9,7 +9,7 @@ export default function SiderUser () {
     return (
         <>
             <Space direction="vertical" style={{ gap: '0px' }}>
-                <Card className="sider__navbar-wrapper" title="MENU" bordered={false}>
+                <Card className="sider__navbar-wrapper" title="MAIN" bordered={false}>
                     <p className="sider__nav-content">
                         <FontAwesomeIcon className="sider__nav-icon" icon={faHouse} />
                         Dashboard
@@ -24,10 +24,10 @@ export default function SiderUser () {
                         <FontAwesomeIcon className="sider__nav-icon" icon={faCalendar} />
                         Lab schedule
                     </Link>
-                    <p className="sider__nav-content">
+                    <Link className="sider__nav-content" to="register-to-use">
                         <FontAwesomeIcon className="sider__nav-icon" icon={faRegistered} />
                         Register to use
-                    </p>
+                    </Link>
                 </Card> 
                 <Card className="sider__navbar" title="DEVICE MANAGEMENT" bordered={false}>
                     <Link className="sider__nav-content" to="list-devices">
