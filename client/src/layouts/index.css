@@ -1,7 +1,6 @@
 .sider {
     background-color: #fff;
-    min-height: 100vh;
-    width: 250px !important;
+    height: 100vh;
     outline: #e0e0e0 1px solid;
 }
 

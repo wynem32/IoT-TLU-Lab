@@ -1,13 +1,48 @@
+/* Steps */
+.steps {
+    margin: auto;
+    margin-top: 30px;
+}
+
+/* Form Create */
+.form-create {
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 16px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
 .form {
-    margin: auto
+    width: 100%;
 }
 
 .form__row {
     display: flex;
     justify-content: space-between;
-    width: 100%;
 }
 
 .form__row-input label {
-    width: 100px;
+    font-weight: 500;
+}
+
+.form__row-input input {
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+.form__row-input .ant-input:placeholder-shown {
+    font-weight: 500;
+}
+
+.form__row-input .ant-picker {
+    border-radius: 6px;
+}
+
+.form__row-input .ant-picker input {
+    padding: 6px 10px;
+}
+
+.form__row-input .ant-picker input:placeholder-shown {
+    font-weight: 500;
 }

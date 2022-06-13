@@ -1,38 +1,62 @@
-.sider__navbar {
-    /* margin-top: 10px; */
+.sider-menu {
+    margin-top: 20px;
 }
 
-.ant-card-head {
-    padding: 0 20px 10px;
-    border-bottom: none;
+.sider-menu-group {
+    margin: 30px 0;
 }
 
-.ant-card-head-title {
-    font-size: 14px;
-    font-weight: 700;
-    padding: 16px 0 0 0;
+.sider-menu-item {
+    margin: auto;
+    padding: 0 10px !important;
+    width: 160px !important;
 }
 
-.ant-card-body {
-    padding: 0 14px;
+.sider-menu-item a {
+    color: #8d8d8d !important;
 }
 
-.sider__nav-icon {
-    margin-right: 10px;
+.sider-menu-item:hover {
+    background-color: transparent;
 }
 
-.sider__nav-content {
-    display: flex;
-    align-items: center;
-    border-radius: 10px ;
-    padding: 10px 14px;
-    margin: 6px 0;
-    color: rgb(163, 163, 163);
-    font-weight: 500;
+.sider-menu-item:hover a {
+    color: #023eac !important;
 }
 
-.sider__nav-content:hover {
-    cursor: pointer;
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
     background-color: #377DFF;
-    color: #fff;
+    border-radius: 10px;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected a {
+    color: #fff !important;
+}
+
+.ant-menu-inline .ant-menu-item::after {
+    border: none;
+}
+
+.ant-menu-item-group-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #262626;
+}
+
+.ant-menu.ant-menu-inline-collapsed .ant-menu-item-group-title {
+    display: none;
+}
+
+.ant-menu.ant-menu-inline-collapsed .sider-menu-group {
+    margin: 0;
+}
+.ant-menu.ant-menu-inline-collapsed .sider-menu-item {
+    padding: 0 16px 0 28px !important;
+}
+
+.ant-menu-inline-collapsed.ant-menu .ant-menu-item-selected {
+    padding: 0 0 0 14px !important;
+    width: 50px !important;
+    background-color: #bbb;
+    border-radius: 10px;
 }

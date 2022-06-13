@@ -1,4 +1,3 @@
-import { Col, Form, Row, Typography, Select, Table } from "antd";
 import CustomizeTable from "../../../components/table/table";
 
 const headCells = [
@@ -8,37 +7,42 @@ const headCells = [
         key: 'no'
     },
     {
-        title: 'Equitment',
-        dataIndex: 'equitment',
-        key: 'equitment'
+        title: 'User Name',
+        dataIndex: 'userName',
+        key: 'userName'
     },
     {
-        title: 'Code',
-        dataIndex: 'code',
-        key: 'code'
+        title: 'User Code',
+        dataIndex: 'userCode',
+        key: 'userCode'
     },
     {
-        title: 'Type',
-        dataIndex: 'type',
-        key: 'type'
+        title: 'Phone',
+        dataIndex: 'phone',
+        key: 'phone'
     },
     {
-        title: 'Quantity',
-        dataIndex: 'quantity',
-        key: 'quantity'
-    },
-    {
-        title: 'Note',
-        dataIndex: 'note',
-        key: 'note'
+        title: 'Purpose',
+        dataIndex: 'purpose',
+        key: 'purpose',
+        render: (value, row, index) => {
+            const obj = {
+                children: value,
+                props: {},
+            };
+            obj.props.rowSpan = 0
+            return obj;
+        }
     }
 ]
 
-export default function ListMember() {
+export default function ListMember(props) {
+    const { data } = props
     return (
         <>
             <CustomizeTable 
                 headCells={headCells}
+                data={data}
             />
         </>
     )
