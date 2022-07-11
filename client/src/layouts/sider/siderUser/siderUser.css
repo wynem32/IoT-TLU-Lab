@@ -1,62 +1,43 @@
-.sider-menu {
-    margin-top: 20px;
+.sider__navbar-wrapper {
+    margin: 10px 0;
 }
 
-.sider-menu-group {
-    margin: 30px 0;
-}
-
-.sider-menu-item {
-    margin: auto;
-    padding: 0 10px !important;
-    width: 160px !important;
-}
-
-.sider-menu-item a {
-    color: #8d8d8d !important;
-}
-
-.sider-menu-item:hover {
-    background-color: transparent;
-}
-
-.sider-menu-item:hover a {
-    color: #023eac !important;
-}
-
-.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-    background-color: #377DFF;
-    border-radius: 10px;
-}
-
-.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected a {
-    color: #fff !important;
-}
-
-.ant-menu-inline .ant-menu-item::after {
+.sider__navbar-wrapper .ant-card-head {
     border: none;
+    padding: 0 20px;
 }
 
-.ant-menu-item-group-title {
-    font-size: 15px;
-    font-weight: 500;
-    color: #262626;
+.sider__navbar-wrapper .ant-card-head-wrapper {
+    font-size: 14px;
+    font-weight: 600;
 }
 
-.ant-menu.ant-menu-inline-collapsed .ant-menu-item-group-title {
-    display: none;
+.sider__navbar-wrapper .ant-card-body {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-.ant-menu.ant-menu-inline-collapsed .sider-menu-group {
-    margin: 0;
-}
-.ant-menu.ant-menu-inline-collapsed .sider-menu-item {
-    padding: 0 16px 0 28px !important;
+.sider__nav-content {
+    padding: 10px 0 10px 32px;
+    color: #a5a5a5;
+    text-decoration: none;
 }
 
-.ant-menu-inline-collapsed.ant-menu .ant-menu-item-selected {
-    padding: 0 0 0 14px !important;
-    width: 50px !important;
-    background-color: #bbb;
+.sider__nav-content-active {
+    color: #fff;
+    background-color: #377DFF;
+    margin: 0 16px;
+    padding: 10px 0 10px 16px;
     border-radius: 10px;
 }
+
+.sider__nav-content-active:hover {
+    color: #fff;
+}
+
+.sider__nav-content .sider__nav-icon,
+.sider__nav-content-active .sider__nav-icon {
+    margin-right: 4px;
+}
+

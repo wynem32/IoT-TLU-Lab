@@ -5,14 +5,13 @@ import SiderUser from "./siderUser/siderUser";
 import './sider.css'
 // import SiderAdmin from "./siderAdmin/siderAdmin";
 
-export default function SideBar(props) {
-    const { collapsed, onCollapsed } = props
+export default function SideBar() {
     return (
         <>
-            <Button onClick={onCollapsed}>
-                { collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined /> }
+            <Button>
+                <MenuFoldOutlined /> 
             </Button>
-            <SiderUser onCollapsed={onCollapsed} />
+            <SiderUser />
             {/* <SiderAdmin />  */}
         </>
     )

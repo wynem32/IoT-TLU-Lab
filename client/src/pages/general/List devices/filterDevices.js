@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import { Button, Col, Form, Input, Row, Select, Typography } from 'antd';
+import { Button, Col, Form, Input, Row, Select } from 'antd';
 import './list.css'
 
-const { Title } = Typography
 const { Option } = Select
 export default function Filter(){
   // const [filter, setFilter] = useState({
@@ -19,7 +18,6 @@ export default function Filter(){
   return(
     <Row>
       <Col className='filter' xl={22}>
-        <Title className='filter__title' level={3}>LIST DEVICES</Title>
         <Col className='filter__wrapper' xl={24}>
           <Form className='filter__wrapper-option'>
             <Form.Item className='filter__wrapper-option-field' label="Name Equitment">

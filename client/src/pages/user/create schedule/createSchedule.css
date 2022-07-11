@@ -8,6 +8,7 @@
 .form-create {
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 30px;
     padding: 20px 16px;
     border-radius: 20px;
     background-color: #fff;
@@ -17,16 +18,23 @@
     width: 100%;
 }
 
-.form__row {
+.form__row,
+.form__button-double {
     display: flex;
     justify-content: space-between;
+}
+
+.form__button-single {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .form__row-input label {
     font-weight: 500;
 }
 
-.form__row-input input {
+.form__row-input input,
+.form__row-input textarea {
     padding: 8px 10px;
     border-radius: 6px;
 }

@@ -1,4 +1,6 @@
 import { Calendar, Layout } from 'antd';
+import ListSchedule from './listSchedule';
+import Schedule from './schedule';
 
 const { Content } = Layout
 
@@ -10,7 +12,8 @@ export default function LabSchedule() {
     return (
         <Layout>
             <Content>
-                Lab schedule
+                <Schedule />
+                <ListSchedule />
             </Content>
         </Layout>
     )

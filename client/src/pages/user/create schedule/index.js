@@ -4,10 +4,12 @@ import FormCreate from "./formCreate";
 import ListMember from './listMemberRegister'
 import moment from "moment";
 import FormSteps from "./steps";
+import AddMember from "./addMember";
 
 const { Content } = Layout
 
 export default function CreateSchedule() {
+    const [step, setStep] = useState(0)
     const [creatorInfo, setCreatorInfo] = useState({
         userName: '',
         userCode: '',
@@ -21,48 +23,48 @@ export default function CreateSchedule() {
         checkShare: false
     })
     const [listMember, setListMember] = useState([])
-    console.log(creatorInfo)
-    const onChangeUserName = (e) => {
+    const [displayFormAddMember, setDisplayFormAddMember] = useState(false)
+    const handleChangeUserName = (e) => {
         setCreatorInfo({
             ...creatorInfo,
             userName: e.target.value
         })
     }
-    const onChangeUserCode = (e) => {
+    const handleChangeUserCode = (e) => {
         setCreatorInfo({
             ...creatorInfo,
             userCode: e.target.value
         })
     }
-    const onChangePhone = (e) => {
+    const handleChangePhone = (e) => {
         setCreatorInfo({
             ...creatorInfo,
             phone: e.target.value
         })
     }
-    const onChangeEmail = (e) => {
+    const handleChangeEmail = (e) => {
         setCreatorInfo({
             ...creatorInfo,
             email: e.target.value
         })
     }
-    const onChangeDayStart = (e) => {
+    const handleChangeDayStart = (e) => {
         setCreatorInfo({
             ...creatorInfo,
             dayStart: e ? e.format('YYYY-MM-DD') : moment(new Date()).format('YYYY-MM-DD')
         })
     }
-    const onChangeDayEnd = (e) => {
+    const handleChangeDayEnd = (e) => {
         console.log(e ? e.format('YYYY-MM-DD') : undefined)
         console.log(e ? e.format('HH:MM:SS') : undefined)
     }
-    const onChangePurpose = (e) => {
+    const handleChangePurpose = (e) => {
         setCreatorInfo({
             ...creatorInfo,
             purpose: e.target.value
         })
     }
-    const onChangeCheckShare = (e) => {
+    const handleChangeCheckShare = (e) => {
         setCreatorInfo({
             ...creatorInfo,
             checkShare: e.target.checked
@@ -82,24 +84,34 @@ export default function CreateSchedule() {
         // ])
         console.log('abc')
     }
+    const handleOpenFormAddMember = () => {
+        setDisplayFormAddMember(!displayFormAddMember)
+    }
     return (
         <Layout>
             <Content>
-                <FormSteps />
-                <FormCreate
-                    data={listMember} 
-                    onChangeUserName={onChangeUserName}
-                    onChangeUserCode={onChangeUserCode}
-                    onChangePhone={onChangePhone}
-                    onChangeEmail={onChangeEmail}
-                    onChangeDayStart={onChangeDayStart}
-                    onChangeDayEnd={onChangeDayEnd}
-                    onChangePurpose={onChangePurpose}
-                    onChangeCheckShare={onChangeCheckShare}
-                    onAddMember={onAddMember}
-                />
-                {Array.isArray(listMember) && listMember.length !== 0 &&
-                    <ListMember data={listMember} />
+                <FormSteps step={step} />
+                {step === 0 ?
+                    <FormCreate
+                        data={listMember} 
+                        handleChangeUserName={handleChangeUserName}
+                        handleChangeUserCode={handleChangeUserCode}
+                        handleChangePhone={handleChangePhone}
+                        handleChangeEmail={handleChangeEmail}
+                        handleChangeDayStart={handleChangeDayStart}
+                        handleChangeDayEnd={handleChangeDayEnd}
+                        handleChangePurpose={handleChangePurpose}
+                        handleChangeCheckShare={handleChangeCheckShare}
+                        onAddMember={onAddMember}
+                        setStep={setStep}
+                    />
+                : step === 1 ?
+                    <AddMember 
+                        displayFormAddMember={displayFormAddMember}
+                        handleOpenFormAddMember={handleOpenFormAddMember}
+                        setStep={setStep}
+                    />
+                : <ListMember data={listMember} />
                 }
             </Content>            
         </Layout>

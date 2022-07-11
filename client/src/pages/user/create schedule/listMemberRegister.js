@@ -1,3 +1,4 @@
+import { Col, Row } from "antd";
 import CustomizeTable from "../../../components/table/table";
 
 const headCells = [
